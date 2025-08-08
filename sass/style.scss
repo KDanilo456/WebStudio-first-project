@@ -1,0 +1,34 @@
+.index-page{
+@import "./components/webstudio.scss/footer";
+@import "./components/webstudio.scss/main";
+@import "./components/webstudio.scss/header";
+}
+.portfolio-page{
+@import "./components/portfolio.scss/footer";
+@import "./components/portfolio.scss/header";
+@import "./components/portfolio.scss/main";
+}
+ul{
+    list-style: none;
+}
+.container{
+    width: 100%;
+    max-width: 1200px;
+    min-width: 0;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+.container > * {
+  min-width: 0;
+}
+body{
+    font-family: "Roboto";
+}
+a{
+    text-decoration: none;
+}
+html, body{
+    overflow-x: hidden;
+    max-width: none;
+}

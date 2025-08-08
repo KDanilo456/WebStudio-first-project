@@ -1,0 +1,234 @@
+@import "../utils/mixins" ;
+@import "../utils/variables.scss";
+.footer{
+    background-color: $footer-backround-color;
+    height: 252px;
+}
+.footer__item-subscribe{
+    margin-bottom: 5px;
+    max-height: 86px;
+    height: 86px;
+}
+.footer__form{
+    position: relative;
+    bottom: 10px;
+}
+.footer__logo{
+    font-size: 26px;
+    font-weight: 700;
+    font-family: Raleway;
+    margin-right: 95px;
+    color: white;
+}
+.footer__gmail{
+    padding-bottom: 15px;
+    color: rgba(255, 255, 255, 0.6);
+}
+.footer__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 30px;
+}
+.footer__icon{
+    width: 44px;
+    height: 44px;
+    max-width: 44px;
+    max-height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    fill: white;
+    &:hover{
+        background-color: $decorative-color;
+        animation-name: div-backround-color;
+        animation-duration: 0.5s;
+    }
+}
+@keyframes div-backround-color{
+    0% {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    100% {
+        background-color: $decorative-color;
+    }
+}
+.footer__svg{
+    min-width: 20px;
+    min-height: 20px;
+    position: relative;
+    left: 12px;
+    top: 12px;
+}
+.footer__item-socials{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 207px;
+    max-height: 80px;
+    gap: 10px;
+}
+.footer__title{
+    font-size: 14px ;
+    color: white;
+    width: 163px;
+    text-transform: uppercase;
+}
+.footer__subscribe-title{
+    font-size: 14px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.footer__input{
+    width: 358px;
+    height: 50px;
+    max-height: 50px;
+    border-radius: 4px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    &::placeholder{
+        font-size: 16px ;
+        font-family: Roboto;
+        color: rgba(255, 255, 255, 0.6);
+        position: relative;
+        left: 15px;     
+    }
+}
+.footer__btn{
+    padding-right: 63px;
+    padding-top: 15px;
+    width: 200px;
+    height: 54px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    font-size: 16px;
+    font-family: Roboto;
+    font-weight: 700;
+    max-width: 200px;
+    padding-left: 16px;
+    @include color-btn ;
+    position: relative;
+    top: 30px;
+}
+.footer__send-svg{
+    position: relative;
+    left: 83px;
+    bottom: 20px;
+}
+.footer__addres{
+    color: white;
+    margin-bottom: 15px;
+}
+.footer__tel{
+    display: block;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 17px;
+}
+@media (min-width: 768px) and (max-width:1024px) {
+    .footer{
+       height: 463px;
+    }
+    .footer__list{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .footer__item-addres{
+        text-align: center;
+    }
+    .footer__title{
+        text-align: center;
+    }
+    .footer__btn{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .footer__subscribe-title{
+        display: block;
+        text-align: center;
+        margin-bottom: 22px;
+    }
+    .footer__input{
+        max-width: 450px;
+        width: 27.8rem;
+    }
+    .footer__item-subscribe{
+        margin-top: 67px;
+    }
+    .footer__item-socials{
+        margin: 0;
+        margin-left: 178px;
+    }
+    .footer__logo{
+        margin-right: 0;
+    }
+}
+@media (max-width:767px){
+    .footer{
+        width: 100%;
+        height: 603px;
+        &__list{ 
+            max-width: 480px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            padding: 0;
+        }
+        &__input{
+            width: 450px;
+            max-width: 448px;
+            height: 48px;
+            padding: 0;
+        }
+        &__item-addres{
+            margin-bottom: 67px;
+            max-width: 232px;
+            margin-right: clamp(30px, calc((100vw - 480px) * ((178 - 20) / (767 - 480)) + 20px), 178px);
+        }
+        &__item-socials{
+            margin-bottom: 63px;
+        }
+        &__svg{
+           left: 0;
+        }
+        &__gmail{
+            width: 232px;
+            display: block ;
+            margin-top: 16px;
+        }
+        &__tel{
+            color: rgba(255, 255, 255, 0.6);
+        }
+        &__title{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__send-svg{
+            position: relative;
+            left: 85px;
+            bottom: 20px;
+        }
+        &__btn{
+           padding-top: 15px;
+           display: block;
+           margin: 0 auto;
+        }
+        &__form{
+            display: block;
+        }
+        &__subscribe-title{
+            margin-bottom: 20px;
+        }
+    }
+    .footer__logo{
+        margin-right: 0;
+    }
+}
+@media (max-width:480px) {
+    .footer__input{
+        width: 80vw;
+    }
+}
